@@ -1,0 +1,35 @@
+WEBVTT 00:00.000 --> 00:30.000
+preview0.JPG#xywh=0,0,160,90
+
+00:50.000 --> 01:30.000
+preview2.JPG#xywh=160,0,320,90
+
+02:45.000 --> 03:30.000
+preview3.JPG#xywh=0,90,160,180
+
+03:45.000 --> 00:04:45.000
+preview4.JPG#xywh=160,90,320,180
+
+05:00.000 --> 06:00.000
+preview5.JPG#xywh=160,90,320,180
+
+06:15.000 --> 07:29.000
+preview15.PNG#xywh=160,90,320,180
+
+NOTE This is a comment in the VTT file
+
+in here is written started minutes:second:milliseconds --> end to minutes:second:milliseconds 
+picture_name.PNG/JPG#xywh=160,90,320,180 (this is setting thumbnail size)
+
+There got few example of this list
+#xywh=0,0,160,90
+very small cube size
+
+#xywh=160,0,320,90
+rectangle type
+
+#xywh=0,90,160,180
+like rectangle but upside down
+
+#xywh=160,90,320,180
+huge taket of full picture, but scaled and can see full of picture
