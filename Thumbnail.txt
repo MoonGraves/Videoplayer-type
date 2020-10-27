@@ -1,0 +1,20 @@
+How to edit thumbnail by video?
+There might be few style take thumbnail is windows snipping tool, or using ffmpeg.exe
+
+What is ffmpeg?
+it's a free and open-source software tool for editing video or image/pictures. 
+Making file smaller keep quality same as possible for example 1.4G to shrinks around 500Mt file.
+It can be handling multiple video, audio and other multimedia files and streams.
+At its core is the FFmpeg program itself, designed for command-line-based processing of video and audio files. 
+It is widely used for format transcoding, basic editing (trimming and concatenation), video scaling, video post-production effects and standards compliance (SMPTE, ITU).
+
+For examples:
+- video files 2k to 1280x720
+- remove/add sounds of video behind scene
+- editing video filters of yuv, hue or YCbCr and ect color types.
+- speed up or slow up of video, if speed up turn to timelapse video
+
+FFmpeg is usually used by .exe file or cmd
+there is more documentation about ffmpeg of this website: https://ffmpeg.org/ffmpeg.html & https://ffmpeg.org/documentation.html
+
+Command type i will be on another file
