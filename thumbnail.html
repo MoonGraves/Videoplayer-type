@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Testaus</title>
+    <link href="style2.css" rel="stylesheet" type="text/css" />
+
+  <!--Jwplayer script&kirjasto-->
+  <script src="https://cdn.jwplayer.com/libraries/aBCdE12G.js"></script>
+  <!--Basic libraries for can see settings for like quality (240p, 360p and 720p) & CC for subtitles if need-->
+
+
+  </head>
+  <body>
+    <script src="script2.js"></script>
+    <script type='text/javascript' src='jwplayer.js'></script>
+
+    <div class="Otsikko1">
+      <h2>Testaus</h2>
+      <h3><em>IGNORE<b>Zhao Tan</b></em></h3>
+    </div>
+    
+    
+    <!--JWplayer-->
+    <!-- https://www.marchettidesign.net/2015/01/embed-video-in-html5-page-with-jw-player/
+      https://developer.jwplayer.com/jwplayer/docs/jw8-embed-a-player
+      https://support.jwplayer.com/articles/how-to-create-a-reproduction-page
+    -->
+    
+    <h2><em>JWplayer</em></h2>
+    <div class='video'>
+    <script src="https://use.fontawesome.com/20603b964f.js"></script>
+      <script type="text/javascript" src="https://content.jwplatform.com/libraries/LJ361JYj.js"></script>
+      <!-- This library for video speed playback rate [0.5, 1. 1.25, 1.5, 2]
+        
+        <script type="text/javascript">jwplayer.key = 'ypdL3Acgwp4Uh2/LDE9dYh3W/EPwDMuA2yid4ytssfI=';</script>
+        <script src="https://cdn.jwplayer.com/libraries/lXvfagRD.js"></script>
+        
+        <div id="myElement">
+        </div>
+
+
+        <script type="text/javascript">
+            jwplayer("myElement").setup
+            ({
+                  image: "https://media.istockphoto.com/videos/night-driving-pov-time-lapse-video-id482749437?s=640x640",
+                  
+                  aspectratio: "16:9",
+        		  width : '1080',
+        		  height : '720',
+                  autostart: false,          
+                  
+                  file : 'videoplayer_name.mp4',
+
+                  title: "1280x720 & 33 Mt",
+                  ga:{},
+                  tracks: 
+                  [
+                    {
+                    kind: "captions",   /* Subtitle */
+                    file: 'C://Users//Omistaja//Desktop//python//Streaming//English.vtt',
+                    label: "English",
+                    default: true //Default at begin, if player start play of the video
+                  }, /*
+                    {
+                    "kind": "captions",
+                    "file": "https://www.yourdomain.com/caption-file_sp.vtt",
+                    "label": "Finnish"
+                    }, */
+                    
+                    {
+                        file: "editointiKansio/Thumbnails1.vtt",  /*Thumbnail picture files */
+                        kind: "thumbnails"
+                        
+                    }]
+                    
+              })
+        </script>
+        </div>
+
+    
+
+  </body>
+</html>
