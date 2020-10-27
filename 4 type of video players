@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Testaus</title>
+    <link href="editointiKansio/style2.css" rel="stylesheet" type="text/css" />
+
+  <!--Video.js script&kirjasto-->
+  <link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
+  <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+  <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+
+  <!--Jwplayer script&kirjasto-->
+  <script src="https://cdn.jwplayer.com/libraries/aBCdE12G.js"></script>
+
+ <!--mediaelementjs-->
+ <link rel="stylesheet" href="https://rawgit.com/mediaelement/mediaelement/master/build/mediaelementplayer.min.css">
+ <link rel="stylesheet" href="editointiKansio/feature-playlist.css">
+    
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    
+    <script src="https://rawgit.com/mediaelement/mediaelement/master/build/mediaelement-and-player.min.js">
+    </script>
+
+    <script src="editointiKansio/feature-playlist.js"></script>
+
+
+  </head>
+  <body>
+    <script src="editointiKansio/script2.js"></script>
+    <script type='text/javascript' src='jwplayer.js'></script>
+
+    <div class="Otsikko1">
+      <h2>Tehtävä 5: Videotoistimet</h2>
+      <h3><em>INTIP18X6 <b>Zhao Tan</b></em></h3>
+    </div>
+    
+    
+    <!--JWplayer-->
+    <h2><em>JWplayer</em></h2>
+    <div class='video'>
+    <script src="https://use.fontawesome.com/20603b964f.js"></script>
+    
+     <script type="text/javascript" src="https://content.jwplatform.com/libraries/LJ361JYj.js"></script> 
+        <!-- <script src="https://cdn.jwplayer.com/libraries/lXvfagRD.js"></script>-->
+
+        
+        <script type="text/javascript">jwplayer.key = 'ypdL3Acgwp4Uh2/LDE9dYh3W/EPwDMuA2yid4ytssfI=';</script>
+        <div id="myElement">
+        </div>
+
+
+        <script type="text/javascript">
+            jwplayer("myElement").setup
+            ({
+                  image: "https://media.istockphoto.com/videos/night-driving-pov-time-lapse-video-id482749437?s=640x640",
+                  aspectratio: "16:9",
+                  width: '640',
+                  height: '360',
+                  autostart: false,
+
+                  file : 'videot/Vid2020D_1280X720.m4v', //Lisätty second pass (moov atom)
+                  title: "1280x720 & 34.3 Mt",
+                  ga:{},
+                  tracks: 
+                  [{
+                    kind: "captions",
+                    file: 'editointiKansio/English.vtt',
+                    label: "English",
+                    default: true //Oletuksena ekana
+                  },   
+                    {
+                    "kind": "captions",
+                    "file": "https://www.yourdomain.com/caption-file_sp.vtt",
+                    "label": "Finnish"
+                    }]
+              
+              })
+        </script>
+        </div>
+
+    <br>
+    <h2><i>Videojs</i></h2>
+    <!--Videojs-->
+    <video
+    id="my-video"
+    class="video-js"
+    controls
+    preload="auto"
+    width="640"
+    height="360"
+    poster="https://media.istockphoto.com/videos/driving-a-car-timelapse-night-camera-on-the-side-video-id473224401?s=640x640"
+    data-setup="{}" 
+    title ="Time lapse video"
+  >
+    <source src="videot/Vid_2020A.m4v" type="video/mp4"  />
+    <source src="videot/Vid_2020A.m4v" type="video/ogg" />
+
+    <track default
+    label="Finnish"
+    kind="captions" 
+    src="editointiKansio/Finnish.vtt"
+    srclang="en"
+    >
+
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a
+      web browser that
+      <a href="https://videojs.com/html5-video-support/" target="_blank"
+        >supports HTML5 video</a
+      >
+    </p>
+  </video>
+  <script src="https://vjs.zencdn.net/7.8.4/video.js"></script><!--Videojs video player:in ulkonäkö-->
+  
+  
+  
+
+  <br><br>
+  <!--MediaEelementjs-->
+  <h2><em>Media Elements type 1</em></h2>
+  <p>Vid 2020 FULLHD 1920x1080</p>
+  <video id="element1" class="mejs-elementti1"
+  width="640" height="360"
+  controls="controls"
+  preload="none"
+  poster="https://cdn.pixabay.com/photo/2019/12/07/19/20/city-4679928_640.png"
+  >
+    <source src="videot/Vid_2020FullHD1920x1080.mp4" type="video/mp4" />
+    </video>
+
+<!--MediaElementjs-->
+<main class="box margin-bottom--x2">
+      <section>
+        <h2>Media Elements type 2</h2>
+        <video class="mediaElementPlaylist" data-showplaylist="true" width="640" height="360" preload="none" 
+          controls poster="https://imageproxy.youversionapi.com/https://s3.amazonaws.com/yvplans/227/640x360.jpg"
+          >
+          
+          <source src="videot/Vid2020moovatom.mp4" type="video/mp4" 
+          width="640" height="360"
+          title="Video moov atom" data-mep-description="from file">
+
+         <!--<source src="https://www.youtube.com/watch?v=UGtSx5kYuOk" type="video/mp4" 
+          width="640" height="360"
+          title="Time lapse video" data-mep-description="from Youtube"> 
+        
+          <source src="C://Users//zhao-//Desktop//python//Streaming//oceans.mp4" type="video/mp4" 
+          width="640" height="360"
+          title="Something" data-mep-description="from file">
+        
+        -->
+          
+          <source src="videot/VID_2020songtext.mp4" type="video/mp4" type="video/ogg" 
+          width="640" height="360"
+          title="Time lapse original väri + song + text" data-mep-description="from file">
+          
+
+          <!--Kolmas valikko - muu video -->
+          <source src="videot/VID_202010tmelaps_color4.mp4" type="video/mp4" 
+          width="640" height="360"
+          title="Time lapse värin muutos" data-mep-description="from file">
+          </video>
+      </section>
+</main>
+
+<script>
+    if ($.fn.mediaelementplayer) {
+        $('audio.mediaElementPlaylist').mediaelementplayer({
+            audioWidth: '100%',
+            alwaysShowControls: true,
+            error: function (media, node) {
+                $(media).parents('.mediaElementPlaylist').addClass('playlist_cannotplay');
+            },
+            features: ['playlistfeature', 'prevtrack', 'playpause', 'nexttrack', 'loop', 'playlist', 'current', 'progress', 'duration', 'volume']
+        });
+
+        $('video.mediaElementPlaylist').mediaelementplayer({
+            //stretching: 'responsive', //Videon venyminen & sama homma sivu pienemmäksi
+            playlistposition: 'bottom',
+            alwaysShowControls: false,
+            alwaysShowPlaylist: true,
+            features: ['playlistfeature', 'prevtrack', 'playpause', 'nexttrack', 'loop', 'playlist', 'current', 'progress', 'duration', 'volume', 'fullscreen']
+        });
+    }
+</script>
+
+
+<!-- https://cloudinary.com/blog/html5_video_player linkkistä löytyy lista mitä voi kokeilla
+https://www.edopedia.com/blog/best-free-html5-video-players/
+-->
+<!--D-tehtv itse valitsemasi videotoistin -->
+
+<!-- https://www.fluidplayer.com/#demo
+  https://docs.fluidplayer.com/docs/integration/quick-setup/
+
+
+  http://dplayer.js.org/guide.html#special-thanks
+-->
+
+<!-- fluid player -->
+<h2 style="font-family:verdana;">Muutta jännää</h2>
+<p style="font-family: 'Times New Roman', Times, serif; font-size: 18px">
+    Fluid sivusto löytyy tältä: <a href="https://www.fluidplayer.com/"target="_blank">Fluidplayer </a></p>
+
+<h2>Taipei video</h2>
+
+<script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
+<video id="video-id" width="640" height="360"
+>
+
+<!--Mkv-tiedosto ei tue HTML5:sta, mutta voidaan kuitenkin käyttää mp4:sta, täällä voidaan määritellä selainta
+<source src="C://Users//zhao-//Desktop//python//Streaming//valerian-480p.mkv" -->
+
+<source src="videot/Taipei-5.mp4" 
+type="video/mp4" type="video/ogg" />
+<track label="English" kind="metadata" srclang="en" src="editointiKansio/English.vtt" default >
+</video>
+
+
+<script>
+    var myFP = fluidPlayer
+    (
+        "video-id",	
+        {
+        "layoutControls": 
+        {
+           "subtitlesEnabled": true, //tekstitykset
+          "controlBar": 
+          {
+            "autoHideTimeout": 3,
+            "animated": true,
+            "autoHide": true
+          },
+
+          "logo": 
+          {
+            "imageUrl": null,
+            "position": "top left",
+            "clickUrl": null,
+            "opacity": 1
+          },
+
+          "htmlOnPauseBlock": 
+          {
+            "html": null,
+            "height": null,
+            "width": null
+          },
+        
+          "autoPlay": false,
+          "mute": true,
+          "primaryColor": "orange", //change color
+          "allowTheatre": true, //theater mode
+          "playPauseAnimation": true,
+          "playbackRateEnabled": true, //video speed up x0.5, 1, 1.5 ja 2
+          "allowDownload": true, //allow to download this video true/false
+          "playButtonShowing": true, //on video middle there is a button
+          "fillToContainer": false,
+          "posterImage": "https://media.gettyimages.com/videos/aerial-view-of-business-district-in-city-of-taipei-taiwan-at-night-video-id1191862592?s=640x640"
+        },
+        
+        "vastOptions": 
+        {
+          "adList": [],
+          "adCTAText": false,
+          "adCTATextPosition": ""
+        }
+})
+</script>
+
+
+  </body>
+</html>
