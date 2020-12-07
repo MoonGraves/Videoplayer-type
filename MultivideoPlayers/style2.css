@@ -1,0 +1,47 @@
+/*index1.html style */
+
+div.Otsikko1{
+  text-align:center
+}
+
+video::cue {
+    background-image: linear-gradient(to bottom, dimgray, lightgray);
+    color: papayawhip;
+  }
+  
+  video::cue(b) {
+    color: peachpuff;
+  }
+
+.myElement {
+    max-width: 720px;
+    max-height: 480px;
+    padding:0;
+    margin:0;
+}
+
+
+
+/* Videojs design & skin css*/
+/* Change all text and icon colors in the player. 
+https://docs.videojs.com/docs/guides/skins.html
+*/
+.video-js.video-js{
+  color: #15fa4f;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Videon pyörimisen kontrollin ulkonäkö */
+.video-js.video-js .vjs-control-bar {background: #000000; }
+.video-js.video-js .vjs-play-progress { background: #f85ef8; }
+.video-js.video-js .vjs-big-play-button {
+  font-size: 3.5em;
+  border: 0.04em solid;
+  border-radius: 0.1em;
+  border-color: black;
+}
+
+
+
+/* D) kohta oma valinta */
+
