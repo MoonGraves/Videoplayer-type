@@ -2,3 +2,4 @@ Webbisivutoon, kuinka lisäät tai käytät varsinaista suoratoisto videota. Per
 Että kaiken lisäksi voidaan suoravideon toistaa erilaisissa videon toistimessa.
 
 Tässä työkaluna on käytetty Putty/Cmd, ja Wowza verkko sivusto, jonka ilmainen käyttö n. vuoden
+Kaiken lisäksi tärkeinä tässä pitää olla mukana oma IP-osoite
