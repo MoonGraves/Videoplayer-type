@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Testaus</title>
+    <link href="style2.css" rel="stylesheet" type="text/css" />
+
+  <!--Jwplayer script&kirjasto-->
+  <script src="https://cdn.jwplayer.com/libraries/aBCdE12G.js"></script>
+
+  </head>
+  <body>
+    <script src="script2.js"></script>
+    <script type='text/javascript' src='jwplayer.js'></script>
+
+    <div class="Otsikko1">
+      <h2>Videovälitystekniikka Lopputyö</h2>
+      <h3><em>Ryhmä E<br> <b> Henkilöide nimet </b></em></h3>
+    </div>
+    
+<p> linkki upload
+        <a href="tyhjasivu.html" target="_blank"> sivustolle</a> </p>
+    
+    <!--JWplayer-->
+    <!-- https://www.marchettidesign.net/2015/01/embed-video-in-html5-page-with-jw-player/
+      https://developer.jwplayer.com/jwplayer/docs/jw8-embed-a-player
+      https://support.jwplayer.com/articles/how-to-create-a-reproduction-page
+    -->
+    <h2><em>Suoratoisto ikkuna</em></h2>
+    <div class='video'>
+    <script src="https://use.fontawesome.com/20603b964f.js"></script>
+      <script type="text/javascript" src="https://content.jwplatform.com/libraries/LJ361JYj.js"></script>
+        
+        <script type="text/javascript">jwplayer.key = 'ypdL3Acgwp4Uh2/LDE9dYh3W/EPwDMuA2yid4ytssfI=';</script>
+        <div id="myElement">
+        </div>
+
+
+        <script type="text/javascript">
+            jwplayer("myElement").setup
+            ({
+                  image: "https://media.istockphoto.com/videos/night-driving-pov-time-lapse-video-id482749437?s=640x640",
+                  aspectratio: "16:9",
+		  width : '640',
+		  height : '360',
+                  autostart: false,
+
+                  file : 'http://172.18.138.70:1935/tehtv7/ryhmae/manifest.mpd', //Lis�tty second pass (moov atom) & wowza ip osoite
+                  title: "Live streaming",
+                  ga:{},
+                  tracks: 
+                  [{
+                    kind: "captions",
+                    file: 'C://Users//Omistaja//Desktop//python//Streaming//English.vtt',
+                    label: "English",
+                    default: true //Oletuksena ekana
+                  },   
+                    {
+                    "kind": "captions",
+                    "file": "https://www.yourdomain.com/caption-file_sp.vtt",
+                    "label": "Finnish"
+                    }]
+              
+              })
+        </script>
+        </div>
+
+	<h2><em> VOD</em></h2>
+  <video id="element1" class="mejs-elementti1"
+  width="640" height="360"
+  controls="controls"
+  preload="none"
+  poster="https://cdn.pixabay.com/photo/2019/12/07/19/20/city-4679928_640.png"
+  >
+    <source src="YourVideoName.mp4" type="video/mp4" />
+    </video>    
+
+  </body>
+</html>
