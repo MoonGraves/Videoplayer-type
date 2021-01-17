@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Tehtava 8</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177320691-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-177320691-2');
+    </script>
+
+  </head>
+  <body>
+    <script src="script.js"></script>
+
+<!-- fluid player -->
+<h2 style="font-family:verdana;">Streaming of video </h2>
+<p style="font-family: 'Times New Roman', Times, serif; font-size: 25px">Tekijät: <b> Blah Blah</b> & <b>Something else </b> </p>
+<p><a href="https://www.memecenter.com/fun/1438249/every-programmer-knows//" target="_blank">Funny meme </a></p>
+
+<script src="https://cdn.fluidplayer.com/v3/current/fluidplayer.min.js"></script>
+<video id="video-id" width="640" height="360">
+
+<source src="folder/videot/videoName.mp4" 
+type="video/mp4" type="video/ogg" />
+
+</video>
+
+<!--tää väri on: colorblance=rh=-0.2 (red) -->
+
+<script>
+    var myFP = fluidPlayer
+    (
+        "video-id",	
+        {
+        "layoutControls": 
+        {
+          "subtitlesEnabled": true,
+          "controlBar": 
+          {
+            "autoHideTimeout": 3,
+            "animated": true,
+            "autoHide": true
+          },
+
+          "logo": 
+          {
+            "imageUrl": null,
+            "position": "top left",
+            "clickUrl": null,
+            "opacity": 1
+          },
+
+          "htmlOnPauseBlock": 
+          {
+            "html": null,
+            "height": null,
+            "width": null
+          },
+        
+          "autoPlay": false,
+          "mute": true,
+          "primaryColor": "orange",
+          "allowTheatre": true, //teatteri moodi, kuin youtube:ssa (teatteritila)
+          "playPauseAnimation": true,
+          "playbackRateEnabled": true, //videon nopeutus x0.5, 1, 1.5 ja 2
+          "allowDownload": true, //oikeus ladata tätä videota
+          "playButtonShowing": true, //videon keskellä on play-nappi
+          "fillToContainer": false,
+          "posterImage": "https://moottori.fi/wp-content/uploads/2020/07/2021-Mazda3-2.5-Turbo-01-640x360.jpg" //Poster image by url
+        },
+        
+        "vastOptions": 
+        {
+          "adList": [],
+          "adCTAText": false,
+          "adCTATextPosition": ""
+        }
+})
+</script>
+<br>
+
+
+  </body>
+</html>
