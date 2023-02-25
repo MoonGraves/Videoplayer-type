@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Tehtv6</title>
+    <link href="style3.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <script src="script3.js"></script>
+
+    <div class="Otsikko1">
+        <h2>Tehtävä 6: Adaptiivinen Streamaus</h2>
+        <h3><em>INTIP18X6 <b>Zhao Tan</b></em></h3>
+      </div>
+
+    <button type="button" class="collapsible">Alku pälä höpinät</button>
+    <div class="content">
+    <img src="C://Users//zhao-//Documents//Videovälitystekn//tehtv6.5.png" max-width="960" min-height="280"> 
+    <p>Alkuperäinen videon osuus upottu tietokoneeseen <b>(76.4Mt)</b> ja n.2-minuutin pituinen video. </p>
+    <p>Vedenkeitin alkuperäisen videosta, josta tein Handbrake:issä vähä enkoodausta <br> 
+        (Handbrake jälkisen teot muuttui <b>40.2Mt </b>), videon pituus ennallaan se kaksi minuuttinen.</p>
+        <p>Josta samanaikaisesti tarkistin asianssa FFmpeg:issä</p> 
+    <img src="C://Users//zhao-//Documents//Videovälitystekn//tehtv6.2.png" max-width="500" height="325">
+    <img src="C://Users//zhao-//Documents//Videovälitystekn//tehtv6.9.png" max-width="450" height="275">
+    </div>
+
+    <br>
+    <button type="button" class="collapsible">Toinen höpinä palikka</button>
+    <div class="content">
+    <p>Vedenkeitin osa Handbrake:kin jälkisen teot, josta nopeutin kaksin kertaiseksi sisältyen takana olevan Audion kanssa (ffmpeg jälkisen teot muuttui: <b>7.16Mt</b>)</p>
+    <img src="C://Users//zhao-//Documents//Videovälitystekn//tehtv6.7.png" max-width="480" min-height="280">
+    </div>
+
+    <br>
+    <button type="button" class="collapsible">Viimeinen päläpölö palikka</button>
+    <div class="content">
+    <p>Viimeisenä annoin paremman enkoodatun profiilin tason (high, main ja baseline) sekä tasot voivat mennä sen 
+        Handbrake:in mukaan eli 3.0, 3.1, 3.2, 4.0 ja pälä pälä kohti 5.2 jopa & <br>
+        muutoksen jälkeen tiedoston pakkauskoko muuttui vähä pienemmäksi, jonka muuttui n. <b>6.56 Mt</b>)</p>
+    <p>Parhaimmillaan videon toistin minimi mikäli voi toistaa verkon sivussa on moon atom, koska videon ominaisuudessa
+        se Data rate ja tms, ovat kohtuulisen sopivat verkkoon yhdistämiseen, jotta voi toistaa sivustoissa.<br>
+        Koska sisältyen pienempi resoluutio <b>960x540</b> mutta kuvantaajuus (fps) pysyy ennallaan eli <i>29.92fps</i>
+    </p>
+    <img src="C://Users//zhao-//Documents//Videovälitystekn//tehtv6.8.png" max-width="280" height="200">
+    <img src="C://Users//zhao-//Documents//Videovälitystekn//tehtv6.10.png" max-width="280" height="200">
+    </div>
+
+
+    <br>
+    <button type="button" class="collapsible">Cmd komennot</button>
+    <div class="content">
+    <p>
+      <li><b>Korkeampi encoder level</b>
+        <ul>[ ffmpeg.exe -i input.mp4 -c:v libx264 -profile:v high -level:v 4.2 -c:a copy output.mkv]</ul></li>
+      
+      <li><b>Resoluutio muutos</b>
+        <ul>[ ffmpeg.exe -i input.mkv -c:v libx264 -vf scale="960:540x" output.m4v]</ul></li>
+
+      <li><b>AV kanssa nopeutus kaksin kertaiseksi</b>
+        <ul>[ffmpeg.exe -i input.m4v -filter_complex "[0:v]setpts=0.5*PTS[v];[0:a]atempo=2.0[a]" -map "[v]" -map "[a]" output.mp4]</ul></li>
+
+      <li><b>Resoluutio + moov atom</b>
+        <ul>[ ffmpeg.exe -i input.mp4 -codec:v libx264 -preset fast -movflags +faststart output.m4v]</ul></li>
+
+    </p>
+    </div>
+
+      <h2>Resoluutio</h2>
+      <video
+        preload="none"
+        controls="controls"
+        style="max-width: 640px; max-height:360px;"
+        width="630"
+        height="480"
+        poster="https://www.scavolini.com/media/immagini/3380_t_cucina_diesel_social_kitchen_04_m.jpg"
+        >
+
+      <source src="C://Users//zhao-//Downloads//ffmpeg//bin//Vedenkeitin_osa2Resolution.m4v" type="video/mp4" onclick="this.play();">
+      <source src="C://Users//zhao-//Downloads//ffmpeg//bin//Vedenkeitin_osa2Resolution.m4v" type="video/ogg">
+      </video>
+
+    <br>
+    <button type="button" class="collapsible">Videon ominaisuudet</button>
+    <div class="content">
+    <p><b><dd>Tiedot</dd></b>
+        <li>Resoluutio: 960x540</li>
+        <li>Total Rate: 369 Kbps</li>
+        <li>Bit Rate: 129 Kbps</li>
+        <li>Frame rate: 29.92 fps</li>
+        <li>Pakkasukoko: 3.62 Mt</li>
+    </p>
+    </div>
+
+    <br>
+    <h2>Datanopeus</h2>
+    <video
+    style="max-width: 640px; max-height:360px;"
+    width="630" height="480"
+    controls 
+    poster="https://media.gannett-cdn.com/36517057001/36517057001_5757169157001_5757154302001-vs.jpg?pubId=36517057001" 
+    preload=""
+    controls="controls">
+    <source src="C://Users//zhao-//Downloads//ffmpeg//bin//Vedenkeitin_osa2Resolution+moovAtom.m4v" type="video/mp4" onclick="this.play();">
+    <source src="C://Users//zhao-//Downloads//ffmpeg//bin//Vedenkeitin_osa2Resolution+moovAtom.m4v" type="video/ogg">
+    </video>
+
+    <br>
+    <button type="button" class="collapsible">Datan ominaisuudet</button>
+    <div class="content">
+        <p><b><dd>Tiedot (sisältyen second moov atom ja second pass)</dd></b>
+            <li>Resoluutio: 960x540</li>
+            <li>Total Rate: 335 Kbps</li>
+            <li>Bit Rate: 129 Kbps</li>
+            <li>Frame rate: 29.92 fps</li>
+            <li>Pakkasukoko: 3.38 Mt</li>
+        </p>
+    </div>
+
+    <br>
+    <h2>Kompleksisuus</h2>
+    <video
+    style="max-width: 640px; max-height:360px;"
+    width="630" height="480"
+    controls 
+    poster="https://kerfdesign.com/app/uploads/2018/09/DSC0018HDR-e1488757943622-1658x960-1-640x360.jpg" 
+    preload=""
+    controls="controls">
+    <source src="C://Users//zhao-//Downloads//ffmpeg//bin//Vedenkeitin_osa2Level.mp4" type="video/mp4" onclick="this.play();">
+    <source src="C://Users//zhao-//Downloads//ffmpeg//bin//Vedenkeitin_osa2Level.mp4" type="video/ogg">
+    </video>
+
+    <br>
+    <button type="button" class="collapsible">Videon level</button>
+    <div class="content">
+        <p><b><dd>Tiedot(profile encoder profile level)</dd></b>
+            <li>Resoluutio: 1280x720</li>
+            <li>Total Rate: 779 Kbps</li>
+            <li>Bit Rate: 129 Kbps</li>
+            <li>Frame rate: 29.92 fps</li>
+            <li>Pakkasukoko: 6.56 Mt</li>
+        </p>
+    </div>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }
+        </script>
+
+
+  </body>
+</html>

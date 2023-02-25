@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <title>INTIP18X6</title>
+    <!-- https://repl.it/repls/PleasedStarryVariety -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-177320691-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-177320691-1');
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KZ27CSQ');</script>
+  <!-- End Google Tag Manager -->
+
+
+
+    <!--link <href="https://vjs.zencdn.net/7.8.4/video-js.css" ref="stylesheet"/>-->
+    <!-- if you'd like to support IE8 (for Video.js. versions prior to v7)
+    <script src="https://vjs.zencdn.net/ie8/1.1.2/videos-ie8.min.js"></script>-->
+  </head>
+  <body>
+
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZ27CSQ"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+    <script src="index.js"></script>
+
+    <br>
+    <h2 style="text-align:center">Hieno ffmpeg</h2>
+
+
+    
+<!--
+    <video
+        id="ekaVideo"
+        class="video-js"
+        controls
+        preload="auto"
+        width="640"
+        height="264"
+        data-setup="{}"
+
+    >
+  -->
+  
+  <!--"autoplay" , joka toista sen automaatisesti heti saappuu sivustoon & sama homma "autoplay loop poster:" joka välkyy pikaisesti sen kuvan näkyviin n.alle sekunnin
+  "poster" on ensimmäisenä kun saappuu sivustoon näkyy kuvana videossa käytettynä linkki & jos on oma kuva sitten nimen mukaan kuvanNimi.jpg
+  -->
+
+  <!--Videon koko: ~142kt eli 145Mt about,
+    tyyppi: .m4v, 
+    Kehyksenleveys & korkeus: 1920 x 1080
+    Käsittelynopeus: 10688 kbps & kokonaissiirtonopeus: 10844 kbps
+    frame sets: 29.97 fps & siirtonopeus: 156 kbps
+  
+    Siel verkkossa F12 -> [Network] videon nopeuden on: vaihelevasti 130kB-140kB
+  -->
+  
+  <!--
+  <video id="ekaVideo"
+  style="max-width: 640px; max-height:360px;" width="630" height="480"
+  controls poster="https://hdwallpaperim.com/wp-content/uploads/2017/09/17/59634-city-Taiwan-Taipei-Taipei_101.jpg" 
+  preload="" controls="controls"
+  >-->
+
+<!--Space keyboard:ista pause:lle -->
+<script>
+var video = document.getElementById("light1", "ToinenVideo", "KolmasVideo", "NeljasVideo", "ViidesVideo");
+document.ondblclick = function(){
+    if(video.requestFullscreen){
+        video.requestFullscreen();
+    }else if(video.mozRequestFullScreen){
+        video.mozRequestFullScreen();
+    }else if(video.webkitRequestFullscreen){
+        video.webkitRequestFullscreen();
+  }
+};
+
+</script>
+
+<!---------------------------------------------------------------------------------->
+<div id="light">
+  <a class="boxclose" id="boxclose" onclick="lightbox_close();"></a>
+  <video id="EnsimmainenVideo" 
+  preload="none"
+  controls="controls"
+  style="max-width: 640px; max-height:360px;"
+  width="630"
+  height="480"
+  poster=
+  >
+
+      <source src="sample_new_50k.mp4" type="video/mp4" onclick="this.play();">
+      <source src="sample_new_50k.mp4" type="video/ogg">
+      </video>
+</div>
+
+<!--Video päälle/pois-->
+<div id="fade" onClick="lightbox_close();" ></div>
+
+<div><ul><li>
+  <p>Mkv:sta enkoodattu video</p>
+  <a href="#" onclick="lightbox_open();">Rannan video</a></li></ul>
+</div>
+
+<!---------------------------------------------------------------------------------->
+<div id="Toinen">
+<a class="boxclose1" id="boxclose1" onclick="lightbox_closeToinen();"></a>
+  <video id="ToinenVideo" 
+  class="video-js"
+  controls
+  preload=""
+  controls="controls"
+  style="max-width: 640px; max-height:360px;"
+  width="630"
+  height="480"
+  poster="https://hdwallpaperim.com/wp-content/uploads/2017/09/17/59634-city-Taiwan-Taipei-Taipei_101.jpg"
+  data-setup="{}"
+
+  >
+      <source src="Taipei_720.mp4" type="video/mp4" controls onclick="this.play();">
+      <source src="Taipei_720.mp4" type="video/ogg">
+      <!--Browser does not support <video> tag -->
+    </video>
+</div>
+
+<!--Video päälle/pois-->
+<div id="fade1" onClick="lightbox_closeToinen();"></div>
+
+<div><ul><li>
+  <p>Taipei video 720p</p>
+  <a href="#" onclick="lightbox_openToinen();">Taipei video</a></li></ul>
+</div>
+
+<!---------------------------------------------------------------------------------->
+<div id="Kolmas">
+  <a class="boxclose2" id="boxclose2" onclick="lightbox_closeKolmas();"></a>
+  
+  <video id="KolmasVideo" 
+    controls
+    controls="controls"
+    style="max-width: 640px; max-height:360px;"
+    width="630"
+    height="480"
+    data-setup="{}"
+    
+    >
+        <source src="sample_smaller.mp4" type="video/mp4"  onclick="this.play();">
+        <source src="sample_smaller.mp4" type="video/ogg"  onclick="this.play();">
+        <!--Browser does not support <video> tag -->
+      </video>
+  </div>
+  
+  <!--Video päälle/pois-->
+  <div id="fade2" onClick="lightbox_closeKolmas();"></div>
+  
+  <div>
+    <ul><li>
+    <p>Ocean</p>
+    <a href="#" onclick="lightbox_openKolmas();">Ocean video</a></li></ul>
+  </div>
+
+  <!---------------------------------------------------------------------------------->
+  <div id="Neljas">
+    <a class="boxclose3" id="boxclose3" onclick="lightbox_closeNeljas();"></a>
+    
+    <video id="NeljasVideo" 
+      controls
+      style="max-width: 640px; max-height:360px;"
+      width="630"
+      height="480"
+      data-setup="{}"
+      
+      >
+          <source src="Taipei-5.mp4" type="video/mp4"  onclick="this.play();">
+          <source src="Taipei-5.mp4" type="video/ogg"  onclick="this.play();">
+        </video>
+    </div>
+    
+    <!--Video päälle/pois-->
+    <div id="fade3" onClick="lightbox_closeNeljas();"></div>
+    
+    <div>
+      <ul><li>
+      <p>Taipei-5</p>
+      <a href="#" onclick="lightbox_openNeljas();">Taipei video</a></li></ul>
+    </div>
+
+<!---------------------------------------------------------------------------------->
+<div id="Viides">
+  <a class="boxclose4" id="boxclose4" onclick="lightbox_closeViides();"></a>
+  
+  <video id="ViidesVideo" 
+    controls
+    style="max-width: 640px; max-height:360px;"
+    width="630"
+    height="480"
+    data-setup="{}"
+    
+    >
+        <source src="Vid 2020_new_audio_speedup.m4v" type="video/m4v"  onclick="this.play();">
+        <source src="Vid 2020_new_audio_speedup.m4v"  type="video/mp4"  onclick="this.play();">
+      </video>
+  </div>
+  
+  <!--Video päälle/pois-->
+  <div id="fade4" onClick="lightbox_closeViides();"></div>
+  
+  <div>
+    <ul><li>
+    <p>Kevän auto pätkä ajellusta</p>
+    <a href="#" onclick="lightbox_openViides();">Time lapse video</a></li></ul>
+  </div>
+
+
+<!---------------------------------------------------------------------------------->
+
+  </body>
+</html>
